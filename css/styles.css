@@ -1,0 +1,135 @@
+*    {
+    margin: 0;
+    padding: 0;
+}
+li, p, h1 {
+    margin: 0;
+    padding: 0;
+}
+html  {
+    background-color: #dfe3e6;
+    width: 960px;
+    margin: 10px auto 0 auto; 
+    font-family: 'Arial', 'Helvetica', sans-serif ;
+}
+body {
+    width: 960px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: 125px 230px 305px 460px 60px;
+    grid-template-areas: 
+        "nav nav nav . . . . . . . . ."
+        "header header header . . . . . . . . ."
+        "section section aside . . . . . . . . ."
+        "article article aside . . . . . . . . ."
+        "footer footer footer . . . . . . . . ."
+}
+nav { grid-area: nav; 
+    grid-row: 1 / 2; grid-column: 1 / span 16;
+    background-image: url(../images/logo.gif);
+    background-repeat: no-repeat;
+}
+nav ul {
+    list-style-type: none;
+    margin-top: 60px;
+    color: #cc1c0d;
+    text-align: right; 
+}
+ul li {
+    display: inline;
+    padding: 100px 8px 45px 9px;
+    color: #cc1c0d;
+    font-weight: bold;
+    font-size: 18px;
+}
+ul li:hover {
+    color: black;
+}
+header {
+    grid-area: header;
+    grid-row: 2 / 3; grid-column: 1 / span 16;
+    background-image: url(../images/header.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    clear: both;
+}
+main {
+     grid-row: 3 / 5; grid-column: 1 / span 10; 
+     background-color: white;
+     float: left;
+     margin-left: 10px;
+     margin-right: 10px;
+}
+main, aside{
+    padding: 30px 0 0 0;
+}
+h1 {
+    font-size: 16px;
+    color: #cc1c0d;
+    border-image-width: 8px;
+    border: solid 2px #929ca4 ;
+    background: url("../images/icon_checker.gif");
+    background-position: center left 5px;
+    background-repeat:no-repeat;
+    background-color: #dfe3e6;
+    padding: 8px 0 10px 19px;
+    border-radius: 10px 0 10px 0;
+    margin-top: 10px; 
+}
+p {
+    margin: 15px 0 15px 0;
+    line-height: 2;
+}
+p.logovprospect {
+    background-image: url("../images/logo_vprospect.gif");
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 63px;
+    margin: 25px 20px 0 0;
+    float: left;
+}
+p.vconvert {
+    background-image: url("../images/logo_vconvert.gif");
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 63px;
+    margin:  8px 20px 0 0;
+    float: left;
+}
+p.vretain {
+    background-image: url("../images/logo_vretain.gif");
+    background-repeat: no-repeat;
+    height: 36px;
+    width: 63px;
+    margin: 10px 20px 0 0;
+    float: left;
+}
+ main > article > p:nth-child(3)::first-line, main > article > p:nth-child(5)::first-line, main > article > p:nth-child(7)::first-line{
+    font-weight: bold;
+}
+section {
+   grid-area: section;
+   grid-row: 3 / 4; grid-column: 1 / span 10;
+}
+article {
+ grid-area: article;
+ grid-row: 4 / 5; grid-column: 1 / span 10;
+}
+aside {
+    grid-area: aside;
+    grid-row: 3 / 5; grid-column: 11/ span 16;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+footer p {
+   font-size: 16px;
+}
+footer{
+    grid-area: footer;
+    grid-row: 5 / 6; grid-column: 1 / span 16;
+    clear: both;
+    text-align: center;
+    color:  black;
+    border-top: 1px solid #dfe3e6;
+}
